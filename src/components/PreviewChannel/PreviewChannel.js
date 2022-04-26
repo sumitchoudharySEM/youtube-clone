@@ -57,13 +57,13 @@ const PreviewChannel = () => {
           {/* {currentChannel.map((video) => (
             <VideoSmall video={video} key={video.id} channelView />
           ))} */}
-          <VideoSmall/>
-          <VideoSmall/>
-          <VideoSmall/>
-          <VideoSmall/>
-          <VideoSmall/>
-          <VideoSmall/>
-          <VideoSmall/>
+          <VideoSmall channelView/>
+          <VideoSmall channelView/>
+          <VideoSmall channelView/>
+          <VideoSmall channelView/>
+          <VideoSmall channelView/>
+          <VideoSmall channelView/>
+          
         </div>
       </div>
     </div>

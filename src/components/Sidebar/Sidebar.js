@@ -10,12 +10,16 @@ import React from 'react';import {
     Whatshot,
   } from "@material-ui/icons";
   import "./styles.css";
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const handleClick = () => navigate({ pathname: '/' }, { replace: true });
   return (
     <div className="sidebar">
       <div className="sidebar__buttons">
         <div
+        onClick={handleClick}
           className="sidebar__btn sidebar__btn--active"
         >
           <Home className="sidebar__icon" />
