@@ -10,13 +10,20 @@ import {
 import { VideoSmall } from "..";
 import { Avatar, Button } from "@material-ui/core";
 import videoURL from "../../assets/videos/video.mp4"
+import { useNavigate } from 'react-router-dom';
 
 const Watch = () => {
+  const navigate = useNavigate();
+  const handleThumbclick = () => navigate({ pathname: '/watch' }, { replace: true });
+  const handleAvatarclick = () => navigate({ pathname: '/PreviewChannel' }, { replace: true });
+
   return (
+
+    
     <div className="watch">
       <div className="watch__wrap">
         <div className="watch__left">
-          <video className="watch__video" autoplay controls>
+          <video className="watch__video" autoPlay controls>
             <source src={videoURL} type="video/mp4" />
           </video>
 
@@ -67,6 +74,7 @@ const Watch = () => {
             <div className="watch__detailsContainer">
               <div className="videothumb__details watch__avatarWrap">
                 <Avatar
+                onClick={handleAvatarclick}
                   style={{ cursor: "pointer" }}
                 />
 

@@ -1,4 +1,4 @@
-import { Header, Main, Sidebar, Watch } from "./components";
+import { Header, Main, PreviewChannel, Sidebar, Watch } from "./components";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -11,6 +11,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />}/>
             <Route path="/Watch" element={<Watch />}/>
+            <Route path="/PreviewChannel" element={<PreviewChannel />}/>
+            
           </Routes>
         </div>
       </div>
