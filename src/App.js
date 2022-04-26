@@ -1,15 +1,20 @@
-import {Header, Main, Sidebar} from "./components";
+import { Header, Main, Sidebar, Watch } from "./components";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="home">
-      <Header/>
-      <div className="app">
-      <Sidebar/>
-      <Main/>
+    <Router>
+      <div className="home">
+        <Header />
+        <div className="app">
+        <Sidebar />
+          <Routes>
+            <Route path="/" element={<Main />}/>
+            <Route path="/Watch" element={<Watch />}/>
+          </Routes>
+        </div>
       </div>
-      
-    </div>
+    </Router>
   );
 }
 
